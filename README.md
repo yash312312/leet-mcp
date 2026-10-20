@@ -96,23 +96,6 @@ If you don't give a username, the client should ask for one. Approve the tool pe
 
 Returns JSON with `username`, `profile.ranking`, `submitStatsGlobal.acSubmissionNum` (counts by difficulty), and `tagProblemCounts` (counts per topic tag, grouped as fundamental, intermediate and advanced).
 
-## Development
-
-```bash
-npm install
-npx @modelcontextprotocol/inspector node server.js
-```
-
-The Inspector opens a browser UI where you can call the tool and inspect the raw output.
-
-Do not use `console.log` in the server, since stdio transport uses stdout for the protocol. Use `console.error` for debug output.
-
-## Limitations
-
-- Counts reflect practice volume only. LeetCode's public API does not expose accuracy or time spent, so "strong" topics mean most solved, not best performance.
-- Topics you have never attempted may not appear in the data at all.
-- The unofficial API may change or rate-limit requests.
-
 ## Troubleshooting
 
 - **`ERR_MODULE_NOT_FOUND`**: run `npm install` inside the project folder.
